@@ -3,31 +3,29 @@
 
     Copyright (C)  2001-2013  Alexandru Csete, OZ9AEC.
     Parts are Copyright John A. Magliacane, KD2BD 1991-2003 (indicated below)
-
-    Authors: Alexandru Csete <oz9aec@gmail.com>
+    Copyright (C)  2025  Axel Osika <osikaaxel@gmail.com> — OGpredict modifications
+ 
+     Authors: Alexandru Csete <oz9aec@gmail.com>
              John A. Magliacane, KD2BD.
              Charles Suprin <hamaa1vs@gmail.com>
-	     Daniel Estevez <daniel@destevez.net>
-
-    Comments, questions and bugreports should be submitted via
-    http://sourceforge.net/projects/gpredict/
-    More details can be found at the project home page:
-
-            http://gpredict.oz9aec.net/
+             Daniel Estevez <daniel@destevez.net>
+             Axel Osika <osikaaxel@gmail.com> (OGpredict)
  
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
-  
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-  
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, visit http://www.fsf.org/
+     Comments, questions and bugreports should be submitted via
+     http://sourceforge.net/projects/gpredict/
+     More details can be found at the project home page:
+ 
+             http://gpredict.oz9aec.net/
+@@
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, visit http://www.fsf.org/
 */
+
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+/* OGpredict note (2025): This file contains comment-only and UI/ops-oriented
+documentation updates related to 1 Hz ephemeris usage and pass extraction
+used by OGpredict. Functional code remains under the original GPL terms. */
+
 
 #ifdef HAVE_CONFIG_H
 #include <build-config.h>

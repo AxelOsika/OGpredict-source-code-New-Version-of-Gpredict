@@ -16,6 +16,28 @@
   You should have received a copy of the GNU General Public License
   along with this program; if not, visit http://www.fsf.org/
 */
+
+
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+/*
+  OGpredict — substantial modifications for operations planning
+  Copyright (C) 2024–2025 Axel Osika <osikaaxel@gmail.com>
+
+  This file is a derived work based on Gpredict's "main.c" by Alexandru Csete.
+  Major OGpredict-specific changes include:
+    • Application branding (window title) set to "OGpredict".
+    • Startup/shutdown hooks for operations data:
+        tool_init("src/Countries_tiles.csv") at startup and tool_cleanup() on exit.
+    • Geometry and UX tweaks: maximize on launch while preserving upstream
+      position/size persistence logic.
+    • Maintained cross-platform behavior (WinSock bootstrap on Windows).
+
+  License: GPL-2.0-or-later (same as upstream). This notice adds authorship for
+  the modifications and does not remove or alter upstream notices.
+*/
+
+
+
 #ifdef HAVE_CONFIG_H
 #include <build-config.h>
 #endif

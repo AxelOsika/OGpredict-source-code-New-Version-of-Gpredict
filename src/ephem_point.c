@@ -1,3 +1,21 @@
+/*
+  OGpredict — extensions to Gpredict for operations planning
+
+  Copyright (C) 2025 Axel Osika <osikaaxel@gmail.com>
+
+  This file is part of OGpredict, a derivative of Gpredict.
+
+  OGpredict is free software: you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by the
+  Free Software Foundation; either version 2 of the License, or (at your
+  option) any later version.  See the GNU General Public License for details.
+*/
+
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+
+
+
+
 #include "ephem_point.h"
 #include "predict-tools.h"    /* for predict_calc() */
 #include <glib/gprintf.h>     /* for g_strdup_printf */
@@ -55,9 +73,14 @@ void collect_groundtrack_duration(sat_t *sat, qth_t *qth,
                                        &p->lat_deg,
                                        &p->lon_deg);
 
-        g_ephem_buffer = g_slist_append(g_ephem_buffer, p);
+        /* O(1) push-front to avoid O(N^2) appends on Windows */
+        g_ephem_buffer = g_slist_prepend(g_ephem_buffer, p);
         g_ephem_buffer_count++;
-    }
+    }    
+    
+    /* restore chronological order after prepend */
+    g_ephem_buffer = g_slist_reverse(g_ephem_buffer);
+
 }
 
 

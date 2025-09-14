@@ -23,6 +23,23 @@
   along with this program; if not, visit http://www.fsf.org/
 */
 
+/*
+  OGpredict — large-scale modifications for operations planning
+  Copyright (C) 2024–2025 Axel Osika <osikaaxel@gmail.com>
+
+  This file is a substantial rewrite derived from the original
+  Gpredict file "gtk-sat-map-popup.c" by Alexandru Csete (OZ9AEC).
+  Major OGpredict changes include:
+   • New 3-tab popup (Ephemeris / Territory / POI) and UI wiring.
+   • 1 Hz ephemeris generation with chunked GTK inserts (idle-driven).
+   • Asynchronous workers (GTask) with cancellability & progress bars.
+   • Country/POI spatial filtering with polygon BBoxes and fast PIP.
+   • Parallel POI slicing, detaching/re-attaching models for speed.
+
+  License: GPL-2.0-or-later (same as upstream). This notice adds
+  authorship for the modifications and does not remove upstream notices.
+*/
+/* SPDX-License-Identifier: GPL-2.0-or-later */
 
 
 #ifdef HAVE_CONFIG_H
