@@ -1,0 +1,5 @@
+usage: git remote get-url [--push] [--all] <name>
+
+    --[no-]push           query push URLs rather than fetch URLs
+    --[no-]all            return all URLs
+

@@ -1,0 +1,1 @@
+SUBDIRS = icons logos maps
